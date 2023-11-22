@@ -14,5 +14,4 @@ void CheckID() {
       mouseDownId = false;
     }
   }
-
 }

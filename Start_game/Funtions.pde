@@ -10,10 +10,10 @@ void reset() {
 
 void mousePressed() {
   if (mouseButton == LEFT) {
-    if (isOnStamp && id.checkingId == false){
+    if (isOnStamp && id.checkingId == false) {
       mouseDownLeft = true;
-  }
-    if (id.checkingId == false &&isOnId || id.checkingId && isCheckingId){
+    }
+    if (id.checkingId == false &&isOnId || id.checkingId && isCheckingId) {
       mouseDownId = true;
     }
   }
@@ -33,8 +33,7 @@ void OnStampHover() {
     stamp.position.x + 100>= player.position.x)
   {
     isOnStamp = true;
-  }
-  else isOnStamp = false;
+  } else isOnStamp = false;
 }
 
 void OnIdHover() {
@@ -44,8 +43,7 @@ void OnIdHover() {
     id.position.x + 180>= player.position.x)&&(id.checkingId == false))
   {
     isOnId = true;
-  }
-  else isOnId = false;
+  } else isOnId = false;
 }
 void CheckingIdHover() {
   if (id.checkingId) {
@@ -55,8 +53,7 @@ void CheckingIdHover() {
       id.positionChecking.x + 400>= player.position.x))
     {
       isCheckingId = true;
-    }
-    else isCheckingId = false;
+    } else isCheckingId = false;
   }
 }
 

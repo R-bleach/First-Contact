@@ -41,16 +41,15 @@ class IdCard {
       }
     }
   }
-  void Face(){
-    if(badFace){
-    fill(0);
-    square(positionChecking.x + 310, positionChecking.y + 30, 50);
-    fill(255,0,0);
-    line(positionChecking.x + 310, positionChecking.y + 30,positionChecking.x + 360, positionChecking.y + 30);
-    }
-    else{
-    fill(0);
-    square(positionChecking.x + 310, positionChecking.y + 30, 50);
+  void Face() {
+    if (badFace) {
+      push();
+      fill(255, 0, 0);
+      square(positionChecking.x + 310, positionChecking.y + 30, 50);
+      pop();
+    } else {
+      fill(0);
+      square(positionChecking.x + 310, positionChecking.y + 30, 50);
     }
   }
 }

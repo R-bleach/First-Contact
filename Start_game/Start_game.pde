@@ -1,12 +1,12 @@
 Player player;
 Stamp stamp;
 IdCard id;
+boolean alreadyCounted = false;
 ArrayList<Customer> goodGuys;
 ArrayList<Customer> badGuys;
 boolean gameOver = false;
 boolean mouseDownLeft = false;
 boolean mouseDownRight = false;
-int m = millis();
 boolean isOnStamp = false;
 int ageNumber;
 int mistakes = 0;

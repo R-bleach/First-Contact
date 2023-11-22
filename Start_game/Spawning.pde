@@ -4,18 +4,18 @@ void spawnGuy() {
 
     if (GuySpawn <= 0.2) {
       ageNumber = (int)random(18, 100);
-      badFace = false;
-      goodGuys.add(new Customer(ageNumber));
+      goodGuys.add(new Customer(ageNumber, false));
     }
 
     if (GuySpawn >= 0.3) {
       ageNumber = (int)random(0, 100);
       if (ageNumber >= 17) {
-        badFace = true;
-        badGuys.add(new Customer(ageNumber));
-      } else if (ageNumber <=17) {
-        badFace = false;
-        badGuys.add(new Customer(ageNumber));
+        badGuys.add(new Customer(ageNumber, true));
+        println("aaaa");
+      }
+      if (ageNumber <=17) {
+        badGuys.add(new Customer(ageNumber, false));
+        println("bbbbb");
       }
     }
   }

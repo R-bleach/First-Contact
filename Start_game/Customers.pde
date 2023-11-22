@@ -3,10 +3,12 @@ class Customer {
   PVector position;
   float speed = 5f;
   int age;
+  boolean badFace = false;
 
-  Customer(int pAge) {
+  Customer(int pAge, boolean pBadFace ) {
     position = new PVector (0, 500);
     age = pAge;
+    badFace = pBadFace;
   }
 
   void update(boolean toRight) {
