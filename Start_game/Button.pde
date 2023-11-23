@@ -13,13 +13,14 @@ class Button
   
   Button(int x, int y, int w, int h, String img)
   {
-    Pos.x = x;
-    Pos.y = y;
+    
     TimesWidth = w;
     TimesHeight = h;
     ButtonImage = loadImage(img);
     Width = ButtonImage.width;
     Height = ButtonImage.height;
+    Pos.x = x - Width/2;
+    Pos.y = y - Height/2;
     
     //Text = t; //erase later
     //Color = color(r, g, b);
@@ -51,7 +52,7 @@ class Button
     //fill(0);
     //textAlign(CENTER, CENTER);
     //text(Text, Pos.x + ( Width/2), Pos.y + (Height/2));
-    image(ButtonImage, Pos.x + ( Width/2), Pos.y + (Height/2), Width * TimesWidth, Height * TimesHeight);
+    image(ButtonImage, Pos.x, Pos.y, Width * TimesWidth, Height * TimesHeight);
     
   }
   

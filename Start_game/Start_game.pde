@@ -21,11 +21,6 @@ int characterSelector;
 
 //mainMenu
 boolean gameStarted = false;
-Button playButton;
-Button optionsButton;
-Button creditsButton;
-int screenSizeX = width;
-int screenSizeY = height;
 
 void setup() {
   fullScreen();
@@ -45,8 +40,6 @@ void draw() {
     doGameOver();
   } else if(gameStarted){
     doGameLoop();
-  } else if(goToSettings){
-    Settings();
   } else {
     MainMenu();
   }

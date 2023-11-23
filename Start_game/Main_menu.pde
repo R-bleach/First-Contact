@@ -33,9 +33,6 @@ void MainMenu(){
     exit();
   }
   
-  if (optionsButton.isClicked()){
-    goToSettings = true;
-  }
 }
 
 void drawMenu() {
@@ -61,10 +58,10 @@ void loadMenuScene() {
   backgroundImg = loadImage("Images/backgroundMenuTest.jpg");
   
   //menu
-  playButton = new Button(width/2 - buttonWidth/2, height/2, 1, 1, "Images/playButtonImg.png");
-  optionsButton = new Button(width/2 - buttonWidth/2, height/2 + 100, 1, 1, "Images/playOptionsImg.png");
-  creditsButton = new Button(width/2 - buttonWidth/2, height/2 + 200, 1, 1, "Images/playOptionsImg.png");
-  exitButton = new Button(width/2 - buttonWidth/2, height/2 + 300, 1, 1, "Images/playExitImg.png");
+  playButton = new Button(width/2, height/2, 1, 1, "Images/playButtonImg.png");
+  optionsButton = new Button(width/2, height/2 + 100, 1, 1, "Images/playOptionsImg.png");
+  creditsButton = new Button(width/2, height/2 + 200, 1, 1, "Images/playOptionsImg.png");
+  exitButton = new Button(width/2, height/2 + 300, 1, 1, "Images/playExitImg.png");
   
 
 
