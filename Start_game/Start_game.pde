@@ -37,10 +37,6 @@ void setup() {
   badGuys = new ArrayList();
   id = new IdCard();
   
-  //menu
-  playButton = new Button(screenSizeX/2 - 120/2, 300, 120, 50, "PLAY", 0, 200, 200);
-  optionsButton = new Button(screenSizeX/2 - 120/2, 400, 120, 50, "OPTIONS", 0, 200, 200);
-  creditsButton = new Button(screenSizeX/2 - 120/2, 500, 120, 50, "CREDITS", 0, 200, 200);
 }
 
 void draw() {
@@ -49,6 +45,8 @@ void draw() {
     doGameOver();
   } else if(gameStarted){
     doGameLoop();
+  } else if(goToSettings){
+    Settings();
   } else {
     MainMenu();
   }
