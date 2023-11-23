@@ -68,3 +68,8 @@ void drawAll() {
     id.Draw();
   player.Draw();
 }
+
+void keyReleased(){
+  if(key == 32);
+  characterSelector = (int)random(1, 5);
+}

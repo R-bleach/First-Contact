@@ -2,7 +2,6 @@ void doGameLoop() {
   if (customersHelped == 10){
    gameOver = true;
   }
-
   player.update();
 
   spawnGuy();

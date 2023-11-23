@@ -17,17 +17,19 @@ int customersHelped = 0;
 boolean isCheckingId = false;
 boolean mouseDownId = false;
 boolean badFace = false;
+int characterSelector;
 
 //mainMenu
 boolean gameStarted = false;
 Button playButton;
 Button optionsButton;
 Button creditsButton;
-int screenSizeX = 1140;
-int screenSizeY = 640;
+int screenSizeX = width;
+int screenSizeY = height;
 
 void setup() {
-  size (1140, 640);
+  //fullScreen();
+  size(1140,640);
   frameRate(60);
   player = new Player();
   stamp = new Stamp();
@@ -42,7 +44,7 @@ void setup() {
 }
 
 void draw() {
-  background(255);
+  background(#711c91);
   if (gameOver) {
     doGameOver();
   } else if(gameStarted){
