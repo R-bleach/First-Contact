@@ -5,7 +5,7 @@ void CheckGuys(ArrayList<Customer> guys) {
 
     badFace = currentGuy.badFace;
 
-    if (isOnStamp && id.checkingId == false) {
+    if (OnStampHover() && id.checkingId == false) {
       if (mouseDownLeft && !mouseDownRight) {
         stamp.decisionMade = true;
         currentGuy.passed = true;

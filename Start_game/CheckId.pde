@@ -1,6 +1,6 @@
 void CheckID() {
   id.idDrawing = true;
-  if (isOnId && id.checkingId == false) {
+  if (OnIdHover() && id.checkingId == false) {
 
     if (mouseDownId) {
       id.checkingId = true;

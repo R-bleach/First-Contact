@@ -19,7 +19,8 @@ boolean mouseDownId = false;
 boolean badFace = false;
 
 void setup() {
-  size (1140, 640);
+  fullScreen();
+  //size(400,400);
   frameRate(60);
   player = new Player();
   stamp = new Stamp();

@@ -26,6 +26,7 @@ void setup() {
   goodGuys = new ArrayList();
   badGuys = new ArrayList();
   id = new IdCard();
+
 }
 
 void draw() {

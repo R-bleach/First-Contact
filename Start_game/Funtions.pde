@@ -5,45 +5,44 @@ void reset() {
   mouseDownRight = false;
   id.idDrawing = false;
   id.checkingId = false;
-  isCheckingId = false;
 }
 
 void mousePressed() {
   if (mouseButton == LEFT) {
-    if (isOnStamp && id.checkingId == false) {
+    if (OnStampHover() && id.checkingId == false) {
       mouseDownLeft = true;
     }
-    if (id.checkingId == false &&isOnId || id.checkingId && isCheckingId) {
+    if (id.checkingId == false && OnIdHover() || id.checkingId && isCheckingId) {
       mouseDownId = true;
     }
   }
 
   if (mouseButton == RIGHT) {
-    if (isOnStamp)
+    if (OnStampHover())
       mouseDownRight = true;
   }
 }
 
 
-void OnStampHover() {
+boolean OnStampHover() {
   if (
     stamp.position.y <= player.position.y &&
     stamp.position.y + 50 >= player.position.y&&
     stamp.position.x <= player.position.x&&
     stamp.position.x + 100>= player.position.x)
   {
-    isOnStamp = true;
-  } else isOnStamp = false;
+    return true;
+  } else return false;
 }
 
-void OnIdHover() {
+boolean OnIdHover() {
   if ((id.position.y <= player.position.y &&
     id.position.y + 150 >= player.position.y&&
     id.position.x <= player.position.x&&
     id.position.x + 180>= player.position.x)&&(id.checkingId == false))
   {
-    isOnId = true;
-  } else isOnId = false;
+    return true;
+  } else return false;
 }
 void CheckingIdHover() {
   if (id.checkingId) {
@@ -58,13 +57,13 @@ void CheckingIdHover() {
 }
 
 void drawAll() {
-  stamp.Draw();
   for (Customer goodGuy : goodGuys) {
     goodGuy.Draw();
   }
   for (Customer badGuy : badGuys) {
     badGuy.Draw();
   }
+  stamp.Draw();
   if (id.idDrawing)
     id.Draw();
   player.Draw();
