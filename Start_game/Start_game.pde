@@ -28,8 +28,8 @@ int screenSizeX = width;
 int screenSizeY = height;
 
 void setup() {
-  //fullScreen();
-  size(1140,640);
+  fullScreen();
+  //size(1140,640);
   frameRate(60);
   player = new Player();
   stamp = new Stamp();

@@ -17,7 +17,7 @@ class IdCard {
     if (checkingId == false) {
       push();
       stroke(0);
-      fill(255);
+      fill(#0abdc6);
       rect(position.x, position.y, widthCard, heightCard);
       pop();
     }
@@ -27,7 +27,7 @@ class IdCard {
 
         push();
         stroke(0);
-        fill(255);
+        fill(#0abdc6);
         rect(positionChecking.x, positionChecking.y, widthCardCheck, heightCardCheck);
         square(positionChecking.x + 300, positionChecking.y + 20, widthCardCheck/5);
         pop();
@@ -35,7 +35,7 @@ class IdCard {
         push();
         fill(0);
         textSize(20);
-        text("age: " + ageNumber, positionChecking.x +20, positionChecking.y + 40);
+        text("age: " + ageNumber, positionChecking.x + width/50, positionChecking.y + 40);
         pop();
         Face();
       }

@@ -51,7 +51,7 @@ void CheckGuys(ArrayList<Customer> guys) {
         alreadyCounted = false;
       }
     } else if (!stamp.decisionMade) {
-      if (currentGuy.position.x < width/2 - 25)
+      if (currentGuy.position.x < displayWidth/2)
         currentGuy.update(true);
     }
   }
