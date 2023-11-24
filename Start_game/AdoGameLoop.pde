@@ -1,12 +1,13 @@
-void doGameLoop() {
+ void doGameLoop() {
   if (customersHelped == 10){
    gameOver = true;
   }
+  background(backGround);
   player.update();
 
   spawnGuy();
-  
-  OnStampHover();
+  OnGreenHover();
+  OnRedHover();
   OnIdHover();
   CheckingIdHover();
   
@@ -14,7 +15,6 @@ void doGameLoop() {
   CheckGuys(badGuys);
   
   CheckID();
-
 
   drawAll();
 }

@@ -5,8 +5,8 @@ boolean alreadyCounted = false;
 ArrayList<Customer> goodGuys;
 ArrayList<Customer> badGuys;
 boolean gameOver = false;
-boolean mouseDownGreen = false;
-boolean mouseDownRed = false;
+boolean mouseDownLeft = false;
+boolean mouseDownRight = false;
 int ageNumber;
 int mistakes = 0;
 int customersHelped = 0;
@@ -20,23 +20,22 @@ boolean gameStarted = false;
 
 void setup() {
   fullScreen();
+  //size(1140,640);
   frameRate(60);
   player = new Player();
   stamp = new Stamp();
   goodGuys = new ArrayList();
   badGuys = new ArrayList();
   id = new IdCard();
-  LoadImages();
+  
 }
 
 void draw() {
-  background(255);
+  background(#711c91);
   if (gameOver) {
     doGameOver();
   } else if(gameStarted){
     doGameLoop();
-  //} else if(goToSettings){
-  //  Settings();
   } else {
     MainMenu();
   }

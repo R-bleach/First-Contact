@@ -5,13 +5,15 @@ void CheckGuys(ArrayList<Customer> guys) {
 
     badFace = currentGuy.badFace;
 
-    if (OnStampHover() && id.checkingId == false) {
-      if (mouseDownLeft && !mouseDownRight) {
+    if (OnGreenHover() && id.checkingId == false) {
+      if (mouseDownGreen && !mouseDownRed) {
         stamp.decisionMade = true;
         currentGuy.passed = true;
         stamp.approved = true;
       }
-      if (mouseDownRight && !mouseDownLeft) {
+    }
+    if (OnRedHover() && id.checkingId == false) {
+      if (mouseDownRed && !mouseDownGreen) {
         stamp.decisionMade = true;
         currentGuy.passed = false;
         stamp.approved = false;
@@ -51,8 +53,9 @@ void CheckGuys(ArrayList<Customer> guys) {
         alreadyCounted = false;
       }
     } else if (!stamp.decisionMade) {
-      if (currentGuy.position.x < displayWidth/2)
+      if (currentGuy.position.x < width/2) {
         currentGuy.update(true);
+      }
     }
   }
 }

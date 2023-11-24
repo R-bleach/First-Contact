@@ -1,7 +1,7 @@
 class IdCard {
-  float widthCard = 150f;
+  float widthCard = displayWidth/10;
   float heightCard = (widthCard /1.75);
-  float widthCardCheck = 400f;
+  float widthCardCheck = displayWidth/4;
   float heightCardCheck = (widthCardCheck /2);
   PVector position;
   PVector positionChecking;
@@ -9,35 +9,44 @@ class IdCard {
   boolean idDrawing = false;
   IdCard() {
     if (checkingId == false) {
-      position = new PVector(width-(widthCard+30), height/ 5);
+      position = new PVector(displayWidth/2.5, displayHeight/ 1.15);
     }
   }
 
   void Draw() {
     if (checkingId == false) {
-      push();
-      stroke(0);
-      fill(#0abdc6);
-      rect(position.x, position.y, widthCard, heightCard);
-      pop();
     }
     {
       if (checkingId == true) {
-        positionChecking = new PVector(width/2-(widthCardCheck/2), height/ 1.5);
-
+        positionChecking = new PVector(width/2-(widthCardCheck/2), height/ 2.2);
+        image(IdButton,0,0);
+      if(characterSelector == 3)
+        image(hologramIdSnake,0,0);
+      
+      else{
         push();
         stroke(0);
         fill(#0abdc6);
         rect(positionChecking.x, positionChecking.y, widthCardCheck, heightCardCheck);
-        square(positionChecking.x + 300, positionChecking.y + 20, widthCardCheck/5);
+        square(positionChecking.x + displayWidth/5.5, positionChecking.y + displayHeight/50, widthCardCheck/5);
         pop();
+        
+        push();
+        stroke(0);
+        fill(#0abdc6);
+        triangle(positionChecking.x , positionChecking.y + heightCardCheck, 
+        positionChecking.x + widthCardCheck/2, positionChecking.y + heightCardCheck*1.4,
+        positionChecking.x + widthCardCheck, positionChecking.y + heightCardCheck);
+        pop();
+
 
         push();
         fill(0);
         textSize(20);
-        text("age: " + ageNumber, positionChecking.x + width/50, positionChecking.y + 40);
+        text("age: " + ageNumber, positionChecking.x + displayWidth/50, positionChecking.y + 40);
         pop();
         Face();
+      }
       }
     }
   }
@@ -45,11 +54,11 @@ class IdCard {
     if (badFace) {
       push();
       fill(255, 0, 0);
-      square(positionChecking.x + 310, positionChecking.y + 30, 50);
+      square(positionChecking.x + displayWidth/5.175, positionChecking.y + displayHeight/25, 50);
       pop();
     } else {
       fill(0);
-      square(positionChecking.x + 310, positionChecking.y + 30, 50);
+      square(positionChecking.x + displayWidth/5.175, positionChecking.y + displayHeight/25, 50);
     }
   }
 }
