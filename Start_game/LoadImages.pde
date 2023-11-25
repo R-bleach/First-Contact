@@ -2,6 +2,12 @@ PImage Cowgirl;
 PImage Frog;
 PImage Snake;
 PImage Spider;
+PImage Alien;
+PImage Celestial;
+PImage Chonker;
+PImage Fish;
+PImage Fly;
+
 PImage backGround;
 PImage Desk;
 PImage GreenButton;
@@ -10,17 +16,23 @@ PImage InstPanelClosed;
 PImage RedButton;
 PImage Floyd;
 PImage hologramIdSnake;
+PImage scanBackground;
 
 void LoadImages() {
   backGround = loadImage("Images/BG.png");
     backGround.resize(displayWidth, displayHeight);
+    
+  scanBackground = loadImage("Images/scanner_room.png");
+  scanBackground.resize(displayWidth, displayHeight);
   
   hologramIdSnake = loadImage("Images/hologramIdSnake.png");
     hologramIdSnake.resize(displayWidth, displayHeight);
     
   Floyd = loadImage("Images/floyd.png");
     Floyd.resize(Floyd.width*3, Floyd.height*3);
-    
+  
+  
+  //Load customers
   Cowgirl = loadImage("Images/cowgirl.png");
     Cowgirl.resize((Cowgirl.width*3), (Cowgirl.height*3));
   Frog = loadImage("Images/FROG.png");
@@ -29,6 +41,17 @@ void LoadImages() {
     Snake.resize(Snake.width*3, Snake.height*3);
   Spider = loadImage("Images/spiderlady.png");
     Spider.resize(Spider.width*3, Spider.height*3);
+  Alien = loadImage("Images/alien.png");
+    Alien.resize(Alien.width*3, Alien.height*3);
+  Celestial = loadImage("Images/celestialbeing.png");
+    Celestial.resize(Celestial.width*3, Celestial.height*3);
+  Chonker = loadImage("Images/chonker.png");
+    Chonker.resize(Chonker.width*3, Chonker.height*3);
+  Fish = loadImage("Images/fishhead.png");
+    Fish.resize(Fish.width*3, Fish.height*3);
+  Fly = loadImage("Images/flyguy.png");
+    Fly.resize(Fly.width*3, Fly.height*3);
+  
     
   Desk = loadImage("Images/Desk.png");
     Desk.resize(displayWidth, displayHeight);

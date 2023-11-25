@@ -14,6 +14,7 @@ boolean isCheckingId = false;
 boolean mouseDownId = false;
 boolean badFace = false;
 int characterSelector;
+boolean isCheckingScan = false;
 
 //mainMenu
 boolean gameStarted = false;
@@ -21,7 +22,7 @@ boolean gameStarted = false;
 void setup() {
   fullScreen();
   frameRate(60);
-  player = new Player();
+    player = new Player();
   stamp = new Stamp();
   goodGuys = new ArrayList();
   badGuys = new ArrayList();

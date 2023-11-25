@@ -68,6 +68,11 @@ void CheckingIdHover() {
 }
 
 void drawAll() {
+  
+  if( isCheckingScan ){
+    drawScan();
+  }
+  
   for (Customer goodGuy : goodGuys) {
     goodGuy.Draw();
   }
@@ -80,6 +85,12 @@ void drawAll() {
   if (id.idDrawing)
     id.Draw();
   player.Draw();
+}
+
+void drawScan(){
+  
+  image(scanBackground, 0, 0);
+  print("we scanning");
 }
 
 //void keyReleased(){
