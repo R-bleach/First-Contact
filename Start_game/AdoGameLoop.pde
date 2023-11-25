@@ -6,8 +6,9 @@
   player.update();
 
   spawnGuy();
-  OnGreenHover();
-  OnRedHover();
+  //OnGreenHover();
+  //OnRedHover();
+  //print(OnLeverHover());
   OnIdHover();
   CheckingIdHover();
   
