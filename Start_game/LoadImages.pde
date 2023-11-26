@@ -15,7 +15,18 @@ PImage IdButton;
 PImage InstPanelClosed;
 PImage RedButton;
 PImage Floyd;
+
+PImage hologramIdCowgirl;
+PImage hologramIdFrog;
 PImage hologramIdSnake;
+PImage hologramIdSpider;
+PImage hologramIdAlien;
+PImage hologramIdCelestial;
+PImage hologramIdChonker;
+PImage hologramIdFish;
+PImage hologramIdFly;
+PImage[] hologramImages = new PImage[9]; //store all IDs
+
 PImage scanBackground;
 
 void LoadImages() {
@@ -25,9 +36,50 @@ void LoadImages() {
   scanBackground = loadImage("Images/scanner_room.png");
   scanBackground.resize(displayWidth, displayHeight);
   
-  hologramIdSnake = loadImage("Images/hologramIdSnake.png");
+  
+  
+  /*
+  hologramIdCowgirl = loadImage("Images/hologramIdSnake.png"); //1
+    hologramIdCowgirl.resize(displayWidth, displayHeight);
+  hologramIdFrog = loadImage("Images/hologramIdSnake.png"); //2
+    hologramIdFrog.resize(displayWidth, displayHeight);
+  hologramIdSnake = loadImage("Images/hologramIdSnake.png"); //3
     hologramIdSnake.resize(displayWidth, displayHeight);
-    
+  hologramIdSpider = loadImage("Images/hologramIdSnake.png"); //4
+    hologramIdSpider.resize(displayWidth, displayHeight);
+  hologramIdAlien = loadImage("Images/hologramIdSnake.png"); //5
+    hologramIdAlien.resize(displayWidth, displayHeight);
+  hologramIdCelestial = loadImage("Images/hologramIdSnake.png"); //6
+    hologramIdCelestial.resize(displayWidth, displayHeight);
+  hologramIdChonker = loadImage("Images/hologramIdSnake.png"); //7
+    hologramIdChonker.resize(displayWidth, displayHeight);
+  hologramIdFish = loadImage("Images/hologramIdSnake.png"); //8
+    hologramIdFish.resize(displayWidth, displayHeight);
+  hologramIdFly = loadImage("Images/hologramIdSnake.png"); //9
+    hologramIdFly.resize(displayWidth, displayHeight);
+  */
+  
+  //save IDs in the array
+  //change all image routes later to their IDs
+  hologramImages[0] = loadImage("Images/hologramIdSnake.png"); //1
+    hologramImages[0].resize(displayWidth, displayHeight);
+  hologramImages[1] = loadImage("Images/hologramIdSnake.png"); //2
+    hologramImages[1].resize(displayWidth, displayHeight);
+  hologramImages[2] = loadImage("Images/hologramIdSnake.png"); //3
+    hologramImages[2].resize(displayWidth, displayHeight);
+  hologramImages[3] = loadImage("Images/hologramIdSnake.png"); //4
+    hologramImages[3].resize(displayWidth, displayHeight);
+  hologramImages[4] = loadImage("Images/hologramIdSnake.png"); //5
+    hologramImages[4].resize(displayWidth, displayHeight);
+  hologramImages[5] = loadImage("Images/hologramIdSnake.png"); //6
+    hologramImages[5].resize(displayWidth, displayHeight);
+  hologramImages[6] = loadImage("Images/hologramIdSnake.png"); //7
+    hologramImages[6].resize(displayWidth, displayHeight);
+  hologramImages[7] = loadImage("Images/hologramIdSnake.png"); //8
+    hologramImages[7].resize(displayWidth, displayHeight);
+  hologramImages[8] = loadImage("Images/hologramIdSnake.png"); //9
+    hologramImages[8].resize(displayWidth, displayHeight);
+  
   Floyd = loadImage("Images/floyd.png");
     Floyd.resize(Floyd.width*3, Floyd.height*3);
   

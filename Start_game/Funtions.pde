@@ -20,7 +20,7 @@ void mousePressed() {
       mouseDownRed = true;
     }
     else if (OnLeverHover()){
-      isCheckingScan = true;
+      isCheckingScan = !isCheckingScan;
     }
     
   }
@@ -60,12 +60,25 @@ boolean OnIdHover() {
 }
 
 boolean OnLeverHover(){
-  return (
-    player.position.x <= displayWidth/1.05 && //change for lever position
-    player.position.x >= displayWidth/1.31 &&
-    player.position.y <= displayHeight/1.1 &&
-    player.position.y >= displayHeight/1.6
+  
+  if ( isCheckingScan ){ //we are in scan scene
+    return(
+      player.position.x <= displayWidth - displayWidth/1.31 && //change for lever position
+      player.position.x >= 0 &&
+      player.position.y <= displayHeight/1.1 &&
+      player.position.y >= displayHeight/1.6
+    );
+  }
+  else { //we are in both scene, rn theres no image but more or less will be there: bottom-left corner
+    return (
+      player.position.x <= displayWidth/1.05 && 
+      player.position.x >= displayWidth/1.31 &&
+      player.position.y <= displayHeight/1.1 &&
+      player.position.y >= displayHeight/1.6
   );
+    
+  }
+  
 }
 
 
@@ -105,7 +118,7 @@ void drawAll() {
 void drawScan(){ //empty just for testing out, add all the scaning gameplay
   
   image(scanBackground, 0, 0);
-  print("we scanning");
+  //print("we scanning");
 }
 
 //void keyReleased(){
