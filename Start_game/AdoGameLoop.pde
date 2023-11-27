@@ -3,6 +3,8 @@
   //backButton.update();
   background(backGround);
   player.update();
+  if (charSel == 1 || charSel == 4) instructions = true;
+    else instructions = false;
 
   spawnGuy();
   //OnGreenHover();

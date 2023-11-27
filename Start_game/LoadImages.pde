@@ -97,7 +97,7 @@ void LoadImages() {
     IdButton.resize(displayWidth, displayHeight);
     
   InstPanelClosed = loadImage("Images/instruction_panel_closed.png");
-    InstPanelClosed.resize(displayWidth/20, displayHeight/2);
-  InstPanelOpen  = loadImage("Images/instruction_panel_open.png");
-    InstPanelOpen.resize(displayWidth, displayHeight);
+    InstPanelClosed.resize(displayWidth/2, displayHeight/2);
+  InstPanelOpen = loadImage("Images/instruction_panel_open.png");
+    InstPanelOpen.resize(displayWidth/2, displayHeight/2);
 }

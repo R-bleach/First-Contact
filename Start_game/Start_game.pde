@@ -3,7 +3,6 @@ Stamp stamp;
 IdCard id;
 Screen screen;
 //Button backButton;
-boolean alreadyCounted = false;
 ArrayList<Customer> goodGuys;
 boolean gameOver = false;
 boolean mouseDownGreen = false;
@@ -25,6 +24,7 @@ void setup() {
   stamp = new Stamp();
   goodGuys = new ArrayList();
   id = new IdCard();
+  screen = new Screen();
   LoadImages();
 }
 
