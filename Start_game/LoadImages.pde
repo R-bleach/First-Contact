@@ -30,6 +30,7 @@ PImage InstPanelOpen;
 PImage RedButton;
 PImage Floyd;
 PImage scanBackground;
+PImage leverScanScene;
 
 
 void LoadImages() {
@@ -84,7 +85,8 @@ void LoadImages() {
   Goblin = loadImage("Images/goblin.png");
     Goblin.resize(Goblin.width*3, Goblin.height*3);
 
-    
+  
+  //load UI
   Desk = loadImage("Images/Desk.png");
     Desk.resize(displayWidth, displayHeight);
     
@@ -96,8 +98,12 @@ void LoadImages() {
   IdButton = loadImage("Images/ID_button_pressed.png");
     IdButton.resize(displayWidth, displayHeight);
     
+  leverScanScene = loadImage("Images/ID_button_pressed.png");
+    leverScanScene.resize(displayWidth, displayHeight);
+    
   InstPanelClosed = loadImage("Images/instruction_panel_closed.png");
     InstPanelClosed.resize(displayWidth/2, displayHeight/2);
   InstPanelOpen = loadImage("Images/instruction_panel_open.png");
     InstPanelOpen.resize(displayWidth/2, displayHeight/2);
+    
 }
