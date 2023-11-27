@@ -3,21 +3,26 @@ void CheckGuys(ArrayList<Customer> guys) {
 
     Customer currentGuy = guys.get(i);
 
-    if (OnGreenHover() && id.checkingId == false) {
+    if (OnGreenHover() && id.checkingId == false && !isCheckingScan //&& inMiddle
+    ) {
       if (mouseDownGreen && !mouseDownRed) {
         stamp.decisionMade = true;
         currentGuy.passed = true;
         stamp.approved = true;
       }
     }
-    if (OnRedHover() && id.checkingId == false) {
+    if (OnRedHover() && id.checkingId == false && !isCheckingScan //&& inMiddle
+    ) {
       if (mouseDownRed && !mouseDownGreen) {
         stamp.decisionMade = true;
         currentGuy.passed = false;
         stamp.approved = false;
       }
     }
-
+    if (currentGuy.position.x >= width/2 - 50 ) {
+        inMiddle = true;
+    }
+    else inMiddle = false;
     if (stamp.decisionMade)
     {
 
@@ -53,6 +58,7 @@ void CheckGuys(ArrayList<Customer> guys) {
         }
         if (currentGuy.passed && charSel == 11 && starDead == true) {
             starDead = false;
+            girlArrest = true;
             reset();
             guys.remove(i);
             println(starDead);

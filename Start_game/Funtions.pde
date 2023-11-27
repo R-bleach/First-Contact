@@ -5,11 +5,11 @@ void reset() {
   mouseDownRed = false;
   id.idDrawing = false;
   id.checkingId = false;
+  inMiddle = false;
 }
 
 void mousePressed() {
   if (mouseButton == LEFT) {
-
     if ( OnIdHover() || id.checkingId && isCheckingId) {
       mouseDownId = true;
     } else if (OnGreenHover()) {
@@ -73,7 +73,7 @@ void OnInstOpenHover() {
 
 boolean OnLeverHover() {
 
-  if (!isCheckingScan) { //on main screen
+  if (!isCheckingScan && charSel >=4) { //on main screen
     return (
       player.position.x <= displayWidth/1.05 && //change for lever position
       player.position.x >= displayWidth/1.31 &&

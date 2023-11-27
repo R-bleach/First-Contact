@@ -12,7 +12,7 @@ void doGameOver() {
   if (gameOver == true && !bouncerDead && starDead) {
     if (second()%2==0) text ("FIRED", width/2, height/2 - 15);
   }
-  if (gameOver == true && !bouncerDead && !starDead) {
+  if (gameOver == true && girlArrest) {
     if (second()%2==0) text ("CONGRATS", width/2, height/2 - 15);
   }
 }

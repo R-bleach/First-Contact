@@ -46,18 +46,20 @@ class IdCard {
   }
   void CheckID() {
     id.idDrawing = true;
-    if (OnIdHover() && id.checkingId == false) {
+    if (inMiddle) {
+      if (OnIdHover() && id.checkingId == false && !isCheckingScan && inMiddle) {
 
-      if (mouseDownId) {
-        id.checkingId = true;
-        mouseDownId = false;
+        if (mouseDownId) {
+          id.checkingId = true;
+          mouseDownId = false;
+        }
       }
-    }
-    if (isCheckingId && id.checkingId) {
+      if (isCheckingId && id.checkingId && !isCheckingScan && inMiddle) {
 
-      if (mouseDownId) {
-        id.checkingId = false;
-        mouseDownId = false;
+        if (mouseDownId) {
+          id.checkingId = false;
+          mouseDownId = false;
+        }
       }
     }
   }

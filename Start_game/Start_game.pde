@@ -16,6 +16,8 @@ boolean isCheckingScan = false;
 boolean bouncerDead = false;
 boolean starDead = false;
 boolean isOnScreen = false;
+boolean inMiddle = false;
+boolean girlArrest = false;
 
 //mainMenu
 boolean gameStarted = false;

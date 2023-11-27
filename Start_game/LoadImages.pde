@@ -35,6 +35,8 @@ PImage RedButton;
 PImage Floyd;
 PImage scanBackground;
 PImage leverScanScene;
+PImage Instructions1;
+PImage Instructions2;
 
 
 void LoadImages() {
@@ -79,7 +81,7 @@ void LoadImages() {
   Snake = loadImage("Images/snake_dude.png");
     Snake.resize(Snake.width*3, Snake.height*3);
   Spider = loadImage("Images/spiderlady.png");
-    Spider.resize(Spider.width*3, Spider.height*3);
+    Spider.resize(Spider.width*5, Spider.height*5);
   Alien = loadImage("Images/alien.png");
     Alien.resize(Alien.width*3, Alien.height*3);
   Celestial = loadImage("Images/celestialbeing.png");
@@ -121,5 +123,9 @@ void LoadImages() {
     InstPanelClosed.resize(displayWidth/2, displayHeight/2);
   InstPanelOpen = loadImage("Images/instruction_panel_open.png");
     InstPanelOpen.resize(displayWidth/2, displayHeight/2);
+  Instructions1= loadImage("Images/Instructions1.png");
+    Instructions1.resize(displayWidth/2, displayHeight/2);
+  Instructions2= loadImage("Images/Instructions2.png");
+    Instructions2.resize(displayWidth/2, displayHeight/2);
     
 }
