@@ -11,8 +11,8 @@ class Stamp {
   void Draw() {
     fill(0);
     if (decisionMade) {
-      if (approved) image(GreenButton,0,0);
-      else if (!approved) image(RedButton,0,0);
+      if (approved) image(GreenButton, 0, 0);
+      else if (!approved) image(RedButton, 0, 0);
     }
     //rect(position.x, position.y, displayWidth/15, displayWidth/20);
     //rect(position2.x, position2.y, displayWidth/15, displayWidth/20);

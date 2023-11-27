@@ -16,6 +16,8 @@ void mousePressed() {
       mouseDownGreen = true;
     } else if (OnRedHover()) {
       mouseDownRed = true;
+    } else if (isOnScreen && screen.instructions) {
+      mouseDownScreen = true;
     } else if (OnLeverHover()) {
       isCheckingScan = !isCheckingScan;
     }
@@ -53,6 +55,19 @@ boolean OnIdHover() {
   {
     return true;
   } else return false;
+}
+
+void OnInstOpenHover() {
+  if (screen.instructions) {
+    if (screen.position.y <= player.position.y &&
+      screen.position.y + displayHeight/3 >= player.position.y &&
+      screen.position.x <= player.position.x &&
+      screen.position.x + displayWidth/8 >= player.position.x)
+    {
+      isOnScreen = true;
+    } else isOnScreen = false;
+    println("a");
+  }
 }
 
 boolean OnLeverHover() {
@@ -100,10 +115,10 @@ void drawAll() {
     goodGuy.DrawChar();
   }
   image(Desk, 0, 0);
-  screen.DrawInstructions();
   stamp.Draw();
   if (id.idDrawing)
     id.DrawID();
+  screen.DrawInstructions();
   player.Draw();
 }
 

@@ -20,29 +20,44 @@ class IdCard {
     {
       if (checkingId == true) {
         positionChecking = new PVector(width/2-(widthCardCheck/2), height/ 2.2);
-        image(IdButton,0,0);
-      if(charSel == 1)
-        image(IdAlien,0,0);         
-      if(charSel == 2)
-        image(IdSnake,0,0);
-      if(charSel == 3)
-        image(IdGoblin,0,0);
-      if(charSel == 4)
-        image(IdFish,0,0);
-      if(charSel == 5)
-        image(IdFly,0,0);
-      if(charSel == 6)
-        image(IdCowgirl,0,0);
-      if(charSel == 7)
-        image(IdSnake,0,0);
-      if(charSel == 8)
-        image(IdFly,0,0);
-      if(charSel == 9)
-        image(IdSpider,0,0);
-      if(charSel == 10)
-        image(IdChonker,0,0);
-      
-      
+        image(IdButton, 0, 0);
+        if (charSel == 1)
+          image(IdAlien, 0, 0);
+        if (charSel == 2)
+          image(IdSnake, 0, 0);
+        if (charSel == 3)
+          image(IdGoblin, 0, 0);
+        if (charSel == 4)
+          image(IdFish, 0, 0);
+        if (charSel == 5)
+          image(IdFly, 0, 0);
+        if (charSel == 6)
+          image(IdCowgirl, 0, 0);
+        if (charSel == 7)
+          image(IdSnake, 0, 0);
+        if (charSel == 8)
+          image(IdFly, 0, 0);
+        if (charSel == 9)
+          image(IdSpider, 0, 0);
+        if (charSel == 10)
+          image(IdChonker, 0, 0);
+      }
+    }
+  }
+  void CheckID() {
+    id.idDrawing = true;
+    if (OnIdHover() && id.checkingId == false) {
+
+      if (mouseDownId) {
+        id.checkingId = true;
+        mouseDownId = false;
+      }
+    }
+    if (isCheckingId && id.checkingId) {
+
+      if (mouseDownId) {
+        id.checkingId = false;
+        mouseDownId = false;
       }
     }
   }

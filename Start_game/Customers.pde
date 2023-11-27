@@ -75,8 +75,9 @@ class Customer {
 }
 
 void spawnGuy() {
-    if ( goodGuys.size() < 1) {
-      goodGuys.add(new Customer());
-      charSel ++;
-    }
+  if ( goodGuys.size() < 1) {
+    goodGuys.add(new Customer());
+    charSel ++;
+    if (charSel == 1 || charSel == 4) screen.instructions = true;
   }
+}

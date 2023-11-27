@@ -36,10 +36,10 @@ PImage leverScanScene;
 void LoadImages() {
   backGround = loadImage("Images/BG.png");
     backGround.resize(displayWidth, displayHeight);
-    
+
   scanBackground = loadImage("Images/scanner_room.png");
-  scanBackground.resize(displayWidth, displayHeight);
-  
+    scanBackground.resize(displayWidth, displayHeight);
+
   IdSnake = loadImage("Images/hologramIdSnake.png");
     IdSnake.resize(displayWidth, displayHeight);
   IdAlien = loadImage("Images/hologramAlien.png");
@@ -58,11 +58,11 @@ void LoadImages() {
     IdFly.resize(displayWidth, displayHeight);
   IdGoblin = loadImage("Images/hologramGoblin.png");
     IdGoblin.resize(displayWidth, displayHeight);
-    
+
   Floyd = loadImage("Images/floyd.png");
     Floyd.resize(Floyd.width*3, Floyd.height*3);
-  
-  
+
+
   //Load customers
   Cowgirl = loadImage("Images/cowgirl.png");
     Cowgirl.resize((Cowgirl.width*3), (Cowgirl.height*3));
@@ -85,22 +85,30 @@ void LoadImages() {
   Goblin = loadImage("Images/goblin.png");
     Goblin.resize(Goblin.width*3, Goblin.height*3);
 
+<<<<<<< Updated upstream
   
   //load UI
+=======
+
+>>>>>>> Stashed changes
   Desk = loadImage("Images/Desk.png");
     Desk.resize(displayWidth, displayHeight);
-    
+
   GreenButton = loadImage("Images/green_button_pressed.png");
     GreenButton.resize(displayWidth, displayHeight);
   RedButton = loadImage("Images/red_button_pressed.png");
     RedButton.resize(displayWidth, displayHeight);
-    
+
   IdButton = loadImage("Images/ID_button_pressed.png");
     IdButton.resize(displayWidth, displayHeight);
+<<<<<<< Updated upstream
     
   leverScanScene = loadImage("Images/ID_button_pressed.png");
     leverScanScene.resize(displayWidth, displayHeight);
     
+=======
+
+>>>>>>> Stashed changes
   InstPanelClosed = loadImage("Images/instruction_panel_closed.png");
     InstPanelClosed.resize(displayWidth/2, displayHeight/2);
   InstPanelOpen = loadImage("Images/instruction_panel_open.png");
