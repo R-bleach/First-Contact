@@ -1,7 +1,6 @@
- void doGameLoop() {
-  if (customersHelped == 10){
-   gameOver = true;
-  }
+   void doGameLoop() {
+  //backButton = new Button(width/100 - buttonWidth/2, height/100, 1, 1, "Images/playButtonImg.png");
+  //backButton.update();
   background(backGround);
   player.update();
 
@@ -13,7 +12,6 @@
   CheckingIdHover();
   
   CheckGuys(goodGuys);
-  CheckGuys(badGuys);
   
   CheckID();
 

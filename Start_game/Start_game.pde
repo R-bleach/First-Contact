@@ -1,20 +1,19 @@
 Player player;
 Stamp stamp;
 IdCard id;
+Screen screen;
+//Button backButton;
 boolean alreadyCounted = false;
 ArrayList<Customer> goodGuys;
-ArrayList<Customer> badGuys;
 boolean gameOver = false;
 boolean mouseDownGreen = false;
 boolean mouseDownRed = false;
-int ageNumber;
-int mistakes = 0;
-int customersHelped = 0;
 boolean isCheckingId = false;
 boolean mouseDownId = false;
-boolean badFace = false;
-int characterSelector;
+int charSel = 0;
 boolean isCheckingScan = false;
+boolean bouncerDead = false;
+boolean starDead = false;
 
 //mainMenu
 boolean gameStarted = false;
@@ -25,7 +24,6 @@ void setup() {
     player = new Player();
   stamp = new Stamp();
   goodGuys = new ArrayList();
-  badGuys = new ArrayList();
   id = new IdCard();
   LoadImages();
 }
