@@ -7,30 +7,15 @@ PImage Celestial;
 PImage Chonker;
 PImage Fish;
 PImage Fly;
-PImage Goblin;
-
-PImage IdSnake;
-PImage IdAlien;
-PImage IdCowgirl;
-PImage IdFrog;
-PImage IdSpider;
-PImage IdCelestial;
-PImage IdChonker;
-PImage IdFish;
-PImage IdFly;
-PImage IdGoblin;
-
 
 PImage backGround;
 PImage Desk;
 PImage GreenButton;
 PImage IdButton;
 PImage InstPanelClosed;
-PImage InstPanelOpen;
 PImage RedButton;
 PImage Floyd;
-PImage scanBackground;
-
+PImage hologramIdSnake;
 
 void LoadImages() {
   backGround = loadImage("Images/BG.png");
@@ -39,24 +24,8 @@ void LoadImages() {
   scanBackground = loadImage("Images/scanner_room.png");
   scanBackground.resize(displayWidth, displayHeight);
   
-  IdSnake = loadImage("Images/hologramIdSnake.png");
-    IdSnake.resize(displayWidth, displayHeight);
-  IdAlien = loadImage("Images/hologramAlien.png");
-    IdAlien.resize(displayWidth, displayHeight);
-  IdCowgirl = loadImage("Images/hologramCowGirl.png");
-    IdCowgirl.resize(displayWidth, displayHeight);
-  IdSpider = loadImage("Images/hologramSpider.png");
-    IdSpider.resize(displayWidth, displayHeight);
-  IdCelestial = loadImage("Images/hologramAlien.png");
-    IdCelestial.resize(displayWidth, displayHeight);
-  IdChonker = loadImage("Images/hologramChonker.png");
-    IdChonker.resize(displayWidth, displayHeight);
-  IdFish = loadImage("Images/hologramFish.png");
-    IdFish.resize(displayWidth, displayHeight);
-  IdFly = loadImage("Images/hologramFly.png");
-    IdFly.resize(displayWidth, displayHeight);
-  IdGoblin = loadImage("Images/hologramGoblin.png");
-    IdGoblin.resize(displayWidth, displayHeight);
+  hologramIdSnake = loadImage("Images/hologramIdSnake.png");
+    hologramIdSnake.resize(displayWidth, displayHeight);
     
   Floyd = loadImage("Images/floyd.png");
     Floyd.resize(Floyd.width*3, Floyd.height*3);
@@ -81,9 +50,6 @@ void LoadImages() {
     Fish.resize(Fish.width*3, Fish.height*3);
   Fly = loadImage("Images/flyguy.png");
     Fly.resize(Fly.width*3, Fly.height*3);
-  Goblin = loadImage("Images/goblin.png");
-    Goblin.resize(Goblin.width*3, Goblin.height*3);
-
     
   Desk = loadImage("Images/Desk.png");
     Desk.resize(displayWidth, displayHeight);
@@ -98,6 +64,4 @@ void LoadImages() {
     
   InstPanelClosed = loadImage("Images/instruction_panel_closed.png");
     InstPanelClosed.resize(displayWidth/20, displayHeight/2);
-  InstPanelOpen  = loadImage("Images/instruction_panel_open.png");
-    InstPanelOpen.resize(displayWidth, displayHeight);
 }

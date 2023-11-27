@@ -89,16 +89,13 @@ void drawAll() {
   }
   
   for (Customer goodGuy : goodGuys) {
-    goodGuy.Draw();
-  }
-  for (Customer badGuy : badGuys) {
-    badGuy.Draw();
-  }
+    goodGuy.DrawChar();
+  } 
   image(Desk, 0, 0);
-  image(InstPanelClosed, 0, height/4);
+  screen.DrawInst();
   stamp.Draw();
   if (id.idDrawing)
-    id.Draw();
+    id.DrawID();
   player.Draw();
 }
 
@@ -110,5 +107,5 @@ void drawScan(){ //empty just for testing out, add all the scaning gameplay
 
 //void keyReleased(){
 //  if(key == 32);
-//  characterSelector = (int)random(1, 5);
+//  charSel = (int)random(1, 5);
 //}

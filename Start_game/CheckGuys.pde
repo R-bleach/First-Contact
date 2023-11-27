@@ -3,8 +3,6 @@ void CheckGuys(ArrayList<Customer> guys) {
 
     Customer currentGuy = guys.get(i);
 
-    badFace = currentGuy.badFace;
-
     if (OnGreenHover() && id.checkingId == false) {
       if (mouseDownGreen && !mouseDownRed) {
         stamp.decisionMade = true;
@@ -29,28 +27,25 @@ void CheckGuys(ArrayList<Customer> guys) {
         currentGuy.update(false);
 
       if  (currentGuy.position.x <= 0|| currentGuy.position.x > width) {
-        if (!alreadyCounted) {
-          customersHelped++;
-          alreadyCounted = true;
-        }
 
-        if (currentGuy.passed && currentGuy.age >= 18 && !currentGuy.badFace || !currentGuy.passed && currentGuy.age < 18||!currentGuy.passed && currentGuy.badFace ) {
-          reset();
-          guys.remove(i);
-          println(guys.size());
-        }
-        if (!currentGuy.passed && currentGuy.age >= 18 && !currentGuy.badFace) {
-          mistakes ++;
-          if (mistakes < 3) {
+          if (currentGuy.passed && (charSel == 1|| charSel == 2||charSel == 3 || charSel == 5 || charSel == 8)
+            ||!currentGuy.passed && (charSel == 1 || charSel == 2||charSel == 3 || charSel == 4 || charSel == 5 || charSel == 7 || charSel == 8 || charSel == 9 )) {
             reset();
             guys.remove(i);
-            println(guys.size());
-          } else gameOver = true;
-        }
-        if (currentGuy.passed && currentGuy.age < 18|| currentGuy.passed && currentGuy.badFace)
-          gameOver = true;
-      } else {
-        alreadyCounted = false;
+          }
+          if (!currentGuy.passed && charSel == 6) {
+            bouncerDead = true;
+            starDead = true;
+            reset();
+            gameOver = true;
+          }
+          if (currentGuy.passed && charSel == 4 || charSel == 7 || charSel == 9) {
+            starDead = true;
+            gameOver = true;
+          }
+          if (currentGuy.passed && charSel == 6 || charSel == 10) {
+            starDead = !starDead;
+          }
       }
     } else if (!stamp.decisionMade) {
       if (currentGuy.position.x < width/2) {
