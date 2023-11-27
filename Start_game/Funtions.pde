@@ -9,20 +9,16 @@ void reset() {
 
 void mousePressed() {
   if (mouseButton == LEFT) {
-    
+
     if ( OnIdHover() || id.checkingId && isCheckingId) {
       mouseDownId = true;
-    }
-    else if (OnGreenHover()) {
+    } else if (OnGreenHover()) {
       mouseDownGreen = true;
-    }
-    else if (OnRedHover()){
+    } else if (OnRedHover()) {
       mouseDownRed = true;
-    }
-    else if (OnLeverHover()){
+    } else if (OnLeverHover()) {
       isCheckingScan = true;
     }
-    
   }
 }
 
@@ -59,13 +55,13 @@ boolean OnIdHover() {
   } else return false;
 }
 
-boolean OnLeverHover(){
+boolean OnLeverHover() {
   return (
     player.position.x <= displayWidth/1.05 && //change for lever position
     player.position.x >= displayWidth/1.31 &&
     player.position.y <= displayHeight/1.1 &&
     player.position.y >= displayHeight/1.6
-  );
+    );
 }
 
 
@@ -82,25 +78,25 @@ void CheckingIdHover() {
 }
 
 void drawAll() {
-  
-  if( isCheckingScan ){
+
+  if ( isCheckingScan ) {
     drawScan();
     return; //doesnt render the rest, not needed
   }
-  
+
   for (Customer goodGuy : goodGuys) {
     goodGuy.DrawChar();
-  } 
+  }
   image(Desk, 0, 0);
-  screen.DrawInst();
+  screen.DrawInstructions();
   stamp.Draw();
   if (id.idDrawing)
     id.DrawID();
   player.Draw();
 }
 
-void drawScan(){ //empty just for testing out, add all the scaning gameplay
-  
+void drawScan() { //empty just for testing out, add all the scaning gameplay
+
   image(scanBackground, 0, 0);
   print("we scanning");
 }
