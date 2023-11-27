@@ -7,6 +7,8 @@ class Player {
   void update() {
     position.x = mouseX;
     position.y = mouseY;
+    //println(position.x);
+    //println(position.y);
   }
 
   void Draw() {

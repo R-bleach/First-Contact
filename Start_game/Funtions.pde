@@ -72,16 +72,15 @@ void OnInstOpenHover() {
 }
 
 boolean OnLeverHover() {
-  
-  if(!isCheckingScan){ //on main screen
+
+  if (!isCheckingScan) { //on main screen
     return (
       player.position.x <= displayWidth/1.05 && //change for lever position
       player.position.x >= displayWidth/1.31 &&
       player.position.y <= displayHeight/1.1 &&
       player.position.y >= displayHeight/1.6
       );
-  }
-  else { //on scan scene
+  } else { //on scan scene
     return (
       player.position.x <= displayWidth - displayWidth/1.31 && //change for lever position
       player.position.x >= 0 &&
@@ -89,7 +88,6 @@ boolean OnLeverHover() {
       player.position.y >= displayHeight/1.6
       );
   }
-  
 }
 
 

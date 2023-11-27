@@ -62,6 +62,10 @@ void LoadImages() {
     IdFly.resize(displayWidth, displayHeight);
   IdGoblin = loadImage("Images/hologramGoblin.png");
     IdGoblin.resize(displayWidth, displayHeight);
+  IdFrog = loadImage("Images/hologramFrog.png");
+    IdFrog.resize(displayWidth, displayHeight);
+  IdCelestial = loadImage("Images/hologramCelestial.png");
+    IdCelestial.resize(displayWidth, displayHeight);
 
   Floyd = loadImage("Images/floyd.png");
     Floyd.resize(Floyd.width*3, Floyd.height*3);

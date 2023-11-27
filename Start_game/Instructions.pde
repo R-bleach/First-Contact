@@ -3,7 +3,7 @@ class Screen {
   boolean instructions = false;
   PVector position;
   Screen() {
-      position = new PVector(0, displayHeight/ 3);
+    position = new PVector(0, displayHeight/ 3);
   }
   void DrawInstructions() {
     if (instructions == false)

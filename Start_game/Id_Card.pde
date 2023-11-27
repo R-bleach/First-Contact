@@ -7,7 +7,7 @@ class IdCard {
   PVector positionChecking;
   boolean checkingId = false;
   boolean idDrawing = false;
-  
+
   IdCard() {
     if (checkingId == false) {
       position = new PVector(displayWidth/2.5, displayHeight/ 1.15);
@@ -30,11 +30,11 @@ class IdCard {
         if (charSel == 5)
           image(IdFish, 0, 0);
         if (charSel == 6)
-          image(IdFly, 0, 0);
+          image(IdFrog, 0, 0);
         if (charSel == 7)
           image(IdCowgirl, 0, 0);
         if (charSel == 8)
-          image(IdSnake, 0, 0);
+          image(IdCelestial, 0, 0);
         if (charSel == 9)
           image(IdFly, 0, 0);
         if (charSel == 10)

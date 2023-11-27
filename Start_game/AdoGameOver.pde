@@ -2,7 +2,7 @@ void doGameOver() {
   textSize(100);
   background(backGround);
   image(Desk, 0, 0);
-  image(InstPanelClosed, 0, height/4);
+  screen.DrawInstructions();
   if (gameOver == true && bouncerDead) {
     if (second()%2==0) text ("DEAD", width/2, height/2 - 15);
   }
