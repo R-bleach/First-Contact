@@ -2,6 +2,7 @@ Player player;
 Stamp stamp;
 IdCard id;
 Screen screen;
+Scanned scanned;
 //Button backButton;
 ArrayList<Customer> goodGuys;
 boolean gameOver = false;
@@ -27,6 +28,7 @@ void setup() {
   goodGuys = new ArrayList();
   id = new IdCard();
   screen = new Screen();
+  scanned = new Scanned();
   LoadImages();
 }
 

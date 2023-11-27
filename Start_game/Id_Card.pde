@@ -27,19 +27,19 @@ class IdCard {
           image(IdSnake, 0, 0);
         if (charSel == 3)
           image(IdGoblin, 0, 0);
-        if (charSel == 4)
-          image(IdFish, 0, 0);
         if (charSel == 5)
-          image(IdFly, 0, 0);
+          image(IdFish, 0, 0);
         if (charSel == 6)
-          image(IdCowgirl, 0, 0);
-        if (charSel == 7)
-          image(IdSnake, 0, 0);
-        if (charSel == 8)
           image(IdFly, 0, 0);
+        if (charSel == 7)
+          image(IdCowgirl, 0, 0);
+        if (charSel == 8)
+          image(IdSnake, 0, 0);
         if (charSel == 9)
-          image(IdSpider, 0, 0);
+          image(IdFly, 0, 0);
         if (charSel == 10)
+          image(IdSpider, 0, 0);
+        if (charSel == 11)
           image(IdChonker, 0, 0);
       }
     }

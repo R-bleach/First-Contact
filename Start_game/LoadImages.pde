@@ -21,6 +21,10 @@ PImage IdFly;
 PImage IdGoblin;
 
 
+PImage ScanCowgirl1;
+PImage ScanCowgirl2;
+
+
 PImage backGround;
 PImage Desk;
 PImage GreenButton;
@@ -85,12 +89,15 @@ void LoadImages() {
   Goblin = loadImage("Images/goblin.png");
     Goblin.resize(Goblin.width*3, Goblin.height*3);
 
-<<<<<<< Updated upstream
-  
-  //load UI
-=======
 
->>>>>>> Stashed changes
+  ScanCowgirl1 = loadImage("Images/cowboy_girl_xray1.png");
+    ScanCowgirl1.resize(displayWidth, displayHeight);
+  ScanCowgirl2 = loadImage("Images/cowboy_girl_xray2.png");
+    ScanCowgirl2.resize(displayWidth, displayHeight);
+  //load UI
+
+
+
   Desk = loadImage("Images/Desk.png");
     Desk.resize(displayWidth, displayHeight);
 
@@ -101,14 +108,11 @@ void LoadImages() {
 
   IdButton = loadImage("Images/ID_button_pressed.png");
     IdButton.resize(displayWidth, displayHeight);
-<<<<<<< Updated upstream
-    
-  leverScanScene = loadImage("Images/ID_button_pressed.png");
-    leverScanScene.resize(displayWidth, displayHeight);
-    
-=======
 
->>>>>>> Stashed changes
+    
+  leverScanScene = loadImage("Images/switch2.png");
+    leverScanScene.resize(displayWidth, displayHeight);
+
   InstPanelClosed = loadImage("Images/instruction_panel_closed.png");
     InstPanelClosed.resize(displayWidth/2, displayHeight/2);
   InstPanelOpen = loadImage("Images/instruction_panel_open.png");

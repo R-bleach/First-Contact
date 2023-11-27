@@ -18,6 +18,7 @@ void mousePressed() {
       mouseDownRed = true;
     } else if (isOnScreen && screen.instructions) {
       mouseDownScreen = true;
+      charSel ++;
     } else if (OnLeverHover()) {
       isCheckingScan = !isCheckingScan;
     }
@@ -120,12 +121,6 @@ void drawAll() {
     id.DrawID();
   screen.DrawInstructions();
   player.Draw();
-}
-
-void drawScan() { //empty just for testing out, add all the scaning gameplay
-
-  image(scanBackground, 0, 0);
-  //print("we scanning");
 }
 
 //void keyReleased(){
