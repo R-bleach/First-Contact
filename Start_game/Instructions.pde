@@ -6,12 +6,12 @@ class Screen {
     position = new PVector(0, displayHeight/ 3);
   }
   void DrawInstructions() {
-    if (instructions == false)
-      positionClosed = new PVector(0, displayHeight/ 5);
-    image(InstPanelClosed, 0, height/5);
+    if (instructions == false){ 
+      positionClosed = new PVector(0, displayHeight/ 3);
+      image(InstPanelClosed, 0, 0);}
     if (instructions == true) {
       screen.position = new PVector(0, displayHeight/ 3);
-      image(InstPanelOpen, 0, height/5);
+      image(InstPanelOpen, 0, 0);
       if (charSel == 0)
       image(Instructions1,displayWidth/4,displayHeight/4);
       if (charSel == 4)

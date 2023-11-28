@@ -18,9 +18,12 @@ boolean starDead = false;
 boolean isOnScreen = false;
 boolean inMiddle = false;
 boolean girlArrest = false;
+boolean girlEntered = false;
+boolean reset = true;
 
 //mainMenu
 boolean gameStarted = false;
+boolean GameLoop = false;
 
 void setup() {
   fullScreen();
@@ -38,10 +41,11 @@ void draw() {
   background(255);
   if (gameOver) {
     doGameOver();
-  } else if (gameStarted) {
+  } else if (GameLoop) {
     doGameLoop();
-    //} else if(goToSettings){
-    //  Settings();
+  }
+  else if (gameStarted) {
+    opening();
   } else {
     MainMenu();
   }

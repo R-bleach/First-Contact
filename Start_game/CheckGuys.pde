@@ -1,9 +1,10 @@
 void CheckGuys(ArrayList<Customer> guys) {
+  //println("size of guys" + guys.size());
   for (int i = guys.size()-1; i >= 0; --i) {
 
     Customer currentGuy = guys.get(i);
 
-    if (OnGreenHover() && id.checkingId == false && !isCheckingScan //&& inMiddle
+    if (OnGreenHover() && id.checkingId == false && !isCheckingScan
     ) {
       if (mouseDownGreen && !mouseDownRed) {
         stamp.decisionMade = true;
@@ -11,7 +12,7 @@ void CheckGuys(ArrayList<Customer> guys) {
         stamp.approved = true;
       }
     }
-    if (OnRedHover() && id.checkingId == false && !isCheckingScan //&& inMiddle
+    if (OnRedHover() && id.checkingId == false && !isCheckingScan
     ) {
       if (mouseDownRed && !mouseDownGreen) {
         stamp.decisionMade = true;
@@ -32,8 +33,7 @@ void CheckGuys(ArrayList<Customer> guys) {
         currentGuy.update(false);
 
       if  (currentGuy.position.x <= 0|| currentGuy.position.x > width) {
-
-        if (currentGuy.passed && (charSel == 1|| charSel == 2||charSel == 3 || charSel == 8 || charSel == 9)
+        if (currentGuy.passed && (charSel == 1|| charSel == 2||charSel == 3 || charSel == 6 || charSel == 9)
           ||!currentGuy.passed && (charSel == 1 || charSel == 2||charSel == 3 || charSel == 5 || charSel == 6 || charSel == 8 || charSel == 9 || charSel == 10 )) {
           reset();
           guys.remove(i);
@@ -41,27 +41,26 @@ void CheckGuys(ArrayList<Customer> guys) {
         if (!currentGuy.passed && charSel == 7) {
           bouncerDead = true;
           starDead = true;
-          println("a " + charSel);
-          gameOver = true;
-          println("b " + charSel);
+          girlEntered = false;
+          reset();
+          guys.remove(i);
         }
-        if (currentGuy.passed == true && (charSel == 5 || charSel == 6 || charSel == 10)) {
+        if (currentGuy.passed == true && (charSel == 5 || charSel == 8 || charSel == 10)) {
           starDead = true;
           gameOver = true;
-          println("oof");
+          guys.remove(i);
         }
         if (currentGuy.passed && charSel == 7) {
           starDead = true;
           reset();
           guys.remove(i);
-          println(starDead);
         }
-        if (currentGuy.passed && charSel == 11 && starDead == true) {
+        if (currentGuy.passed && charSel == 11) {
+          if(girlEntered){
             starDead = false;
-            girlArrest = true;
+            girlArrest = true;}
             reset();
             guys.remove(i);
-            println(starDead);
           }
         charSel ++;
       }

@@ -10,16 +10,19 @@ void reset() {
 
 void mousePressed() {
   if (mouseButton == LEFT) {
-    if ( OnIdHover() || id.checkingId && isCheckingId) {
+    if (inMiddle && OnIdHover() ||inMiddle && id.checkingId && isCheckingId) {
       mouseDownId = true;
-    } else if (OnGreenHover()) {
+    } else if (inMiddle && OnGreenHover()) {
       mouseDownGreen = true;
-    } else if (OnRedHover()) {
+    } else if (inMiddle && OnRedHover()) {
       mouseDownRed = true;
     } else if (isOnScreen && screen.instructions) {
       mouseDownScreen = true;
       charSel ++;
-    } else if (OnLeverHover()) {
+    } else if (inMiddle && OnLeverHover()) {
+      isCheckingScan = !isCheckingScan;
+    }
+    else if (OnLeverHoverScreen()) {
       isCheckingScan = !isCheckingScan;
     }
   }
@@ -67,28 +70,29 @@ void OnInstOpenHover() {
     {
       isOnScreen = true;
     } else isOnScreen = false;
-    println("a");
   }
 }
 
 boolean OnLeverHover() {
-
-  if (!isCheckingScan && charSel >=4) { //on main screen
-    return (
-      player.position.x <= displayWidth/1.05 && //change for lever position
-      player.position.x >= displayWidth/1.31 &&
-      player.position.y <= displayHeight/1.1 &&
-      player.position.y >= displayHeight/1.6
-      );
-  } else { //on scan scene
-    return (
-      player.position.x <= displayWidth - displayWidth/1.31 && //change for lever position
-      player.position.x >= 0 &&
-      player.position.y <= displayHeight/1.1 &&
-      player.position.y >= displayHeight/1.6
-      );
-  }
+  if (!isCheckingScan && charSel >=4 &&(
+    player.position.x <= displayWidth/1.05 && //change for lever position
+    player.position.x >= displayWidth/1.31 &&
+    player.position.y <= displayHeight/1.1 &&
+    player.position.y >= displayHeight/1.6
+    )) //on main screen
+    return true;
+    else return false;
 }
+boolean OnLeverHoverScreen() {
+  if (isCheckingScan && charSel >=4 &&
+    (player.position.x <= displayWidth - displayWidth/1.31 && //change for lever position
+    player.position.x >= 0 &&
+    player.position.y <= displayHeight/1.1 &&
+    player.position.y >= displayHeight/1.6)) //on scan scene
+    return true;
+  else return false;
+}
+
 
 
 void CheckingIdHover() {
@@ -125,3 +129,31 @@ void drawAll() {
 //  if(key == 32);
 //  charSel = (int)random(1, 5);
 //}
+void fullReset(){
+gameOver = false;
+mouseDownGreen = false;
+mouseDownRed = false;
+isCheckingId = false;
+mouseDownId = false;
+mouseDownScreen = false;
+isCheckingScan = false;
+bouncerDead = false;
+starDead = false;
+isOnScreen = false;
+inMiddle = false;
+girlArrest = false;
+girlEntered = false;
+mouseDownScreen = false;
+isOnScreen = false;
+
+//mainMenu
+gameStarted = false;
+GameLoop = false;
+loadMenu = true;
+goodGuys.clear();
+openingScene = 0;
+timer = 0;
+charSel = 0;
+stamp.decisionMade = false;
+reset = true;
+}
