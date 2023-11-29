@@ -11,7 +11,7 @@ void opening() {
     image(Opening3,0,0);
   if (openingScene ==3)
     image(Opening4,0,0);
-  if (openingScene == 3){
+  if (openingScene == 4){
     GameLoop = true;}
   nextScene();
 }

@@ -24,6 +24,16 @@ PImage IdGoblin;
 PImage ScanCowgirl1;
 PImage ScanCowgirl2;
 PImage ScanFrog;
+PImage ScanSpider;
+PImage ScanSpider2;
+PImage ScanChonker;
+PImage ScanChonker2;
+PImage ScanFish;
+PImage ScanFish2;
+PImage ScanFly;
+PImage ScanFly2;
+PImage ScanCelestial;
+PImage ScanCelestial2;
 
 
 PImage backGround;
@@ -107,6 +117,26 @@ void LoadImages() {
     ScanCowgirl2.resize(displayWidth, displayHeight);
   ScanFrog = loadImage("Images/frog_xray.png");
     ScanFrog.resize(displayWidth, displayHeight);
+  ScanSpider = loadImage("Images/spider_girl_xray.png");
+    ScanSpider.resize(displayWidth, displayHeight);
+  ScanSpider2 = loadImage("Images/xray_spider2_.png");
+    ScanSpider2.resize(displayWidth, displayHeight);
+  ScanChonker = loadImage("Images/chonker_xray.png");
+    ScanChonker.resize(displayWidth, displayHeight);
+  ScanChonker2 = loadImage("Images/xray_chonker2.png");
+    ScanChonker2.resize(displayWidth, displayHeight);
+  ScanFly = loadImage("Images/flyguy_xray.png");
+    ScanFly.resize(displayWidth, displayHeight);
+  ScanFly2 = loadImage("Images/xray_flyboy2.png");
+    ScanFly2.resize(displayWidth, displayHeight);
+  ScanFish= loadImage("Images/fishhead_xray.png");
+    ScanFish.resize(displayWidth, displayHeight);
+  ScanFish2 = loadImage("Images/xray_fishhead2.png");
+    ScanFish2.resize(displayWidth, displayHeight);
+  ScanCelestial = loadImage("Images/celestial_xray.png");
+    ScanCelestial.resize(displayWidth, displayHeight);
+  ScanCelestial2 = loadImage("Images/xray_celestial2.png");
+    ScanCelestial2.resize(displayWidth, displayHeight);
 
   Desk = loadImage("Images/Desk.png");
     Desk.resize(displayWidth, displayHeight);
