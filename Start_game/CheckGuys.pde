@@ -8,7 +8,7 @@ void CheckGuys(ArrayList<Customer> guys) {
     ) {
       if (mouseDownGreen && !mouseDownRed) {
         stamp.decisionMade = true;
-        currentGuy.passed = true;
+        currentGuy.makeDecision(true);
         stamp.approved = true;
       }
     }
@@ -16,7 +16,7 @@ void CheckGuys(ArrayList<Customer> guys) {
     ) {
       if (mouseDownRed && !mouseDownGreen) {
         stamp.decisionMade = true;
-        currentGuy.passed = false;
+        currentGuy.makeDecision(false);
         stamp.approved = false;
       }
     }

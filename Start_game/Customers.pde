@@ -15,7 +15,7 @@ class Customer {
       position = new PVector(50, displayHeight/2);
     else position = new PVector (0, displayHeight/2);
     
-    customerDialog = allCustomerDialogs.get(charSel);
+    
   }
 
   void update(boolean toRight) {
@@ -84,6 +84,7 @@ class Customer {
   }
   
   void showDialog(){
+ 
     if (spaceKeyPressed){ //show next dialog
       spaceKeyPressed = false;
       actualText += 1;
@@ -119,6 +120,16 @@ class Customer {
   
   boolean isSpeaking(){
     return !(actualText >= customerDialog.size()); //if out of range returns true;
+  }
+  
+  void makeDecision( boolean p){
+    passed = p;
+    if ( p ) {
+      customerDialog = allCustomerDialogs.get(charSel);
+    }
+    else {
+      customerDialog = allCustomerDialogs.get(15 + charSel);
+    }
   }
 }
 
