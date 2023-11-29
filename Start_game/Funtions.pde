@@ -155,5 +155,6 @@ openingScene = 0;
 timer = 0;
 charSel = 0;
 stamp.decisionMade = false;
+minorIn = false;
 reset = true;
 }

@@ -7,9 +7,11 @@ void opening() {
      image(Opening1,0,0);
   if (openingScene == 1)
     image(Opening2,0,0);
-  //if (openingScene ==2)
-  //  image(Opening4,0,0);
-  if (openingScene == 2){
+  if (openingScene == 2)
+    image(Opening3,0,0);
+  if (openingScene ==3)
+    image(Opening4,0,0);
+  if (openingScene == 3){
     GameLoop = true;}
   nextScene();
 }

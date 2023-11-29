@@ -41,7 +41,10 @@ PImage Instructions2;
 
 PImage Opening1;
 PImage Opening2;
+PImage Opening3;
 PImage Opening4;
+
+PImage neutralEnding;  
 
 
 void LoadImages() {
@@ -128,7 +131,12 @@ void LoadImages() {
     Opening1.resize(displayWidth, displayHeight);
   Opening2 = loadImage("Images/opening2.png");
     Opening2.resize(displayWidth, displayHeight);
+  Opening3 = loadImage("Images/poster.png");
+    Opening3.resize(displayWidth, displayHeight);
   Opening4 = loadImage("Images/opening4.png");
     Opening4.resize(displayWidth, displayHeight);
+    
+  neutralEnding = loadImage("Images/neutral_ending.png");
+    neutralEnding.resize(displayWidth, displayHeight);
     
 }

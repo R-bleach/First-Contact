@@ -52,11 +52,15 @@ void CheckGuys(ArrayList<Customer> guys) {
         }
         if (currentGuy.passed == true && (charSel == 5 || charSel == 8 || charSel == 10)) {
           starDead = true;
-          gameOver = true;
           guys.remove(i);
         }
         if (currentGuy.passed && charSel == 7) {
           starDead = true;
+          reset();
+          guys.remove(i);
+        }
+        if (currentGuy.passed && charSel == 3) {
+          minorIn = true;
           reset();
           guys.remove(i);
         }

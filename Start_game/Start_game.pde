@@ -24,6 +24,7 @@ boolean girlArrest = false;
 boolean girlEntered = false;
 boolean reset = true;
 boolean speaking = false;
+boolean minorIn = false;
 
 //mainMenu
 boolean gameStarted = false;
