@@ -26,11 +26,16 @@ void CheckGuys(ArrayList<Customer> guys) {
     else inMiddle = false;
     if (stamp.decisionMade)
     {
-
-      if (currentGuy.passed)
-        currentGuy.update(true);
-      if (!currentGuy.passed)
-        currentGuy.update(false);
+      //show dialog
+      if (currentGuy.isSpeaking()){
+        currentGuy.showDialog();
+      } //if no more text
+      else {
+        if (currentGuy.passed)
+          currentGuy.update(true);
+        if (!currentGuy.passed)
+          currentGuy.update(false);
+      }
 
       if  (currentGuy.position.x <= 0|| currentGuy.position.x > width) {
         if (currentGuy.passed && (charSel == 1|| charSel == 2||charSel == 3 || charSel == 6 || charSel == 9)
@@ -64,6 +69,8 @@ void CheckGuys(ArrayList<Customer> guys) {
           }
         charSel ++;
       }
+      
+      
     } else if (!stamp.decisionMade) {
       if (currentGuy.position.x < width/2) {
         currentGuy.update(true);

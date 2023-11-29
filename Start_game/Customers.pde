@@ -5,11 +5,17 @@ class Customer {
   float angle1, angle2;
   int age;
   boolean badFace = false;
-
+  
+  //for the dialog management
+  int actualText = 0;
+  ArrayList<String> customerDialog = new ArrayList<String>();
+  
   Customer() {
     if(reset && charSel == 1)
       position = new PVector(50, displayHeight/2);
     else position = new PVector (0, displayHeight/2);
+    
+    customerDialog = allCustomerDialogs.get(charSel);
   }
 
   void update(boolean toRight) {
@@ -73,6 +79,46 @@ class Customer {
         image(Chonker, position.x- Chonker.width/2 + 10 * sin(millis()/300.0f), displayHeight/6);
       else image(Chonker, position.x- Chonker.width/2, displayHeight/6);
     }
+    
+    
+  }
+  
+  void showDialog(){
+    if (spaceKeyPressed){ //show next dialog
+      spaceKeyPressed = false;
+      actualText += 1;
+      
+      if ( actualText >= customerDialog.size() ){
+        return; //if no more lines finish
+      }
+    }
+    
+    else {
+    
+      // Get the size
+      float textWidth = textWidth(customerDialog.get(actualText));
+      float textHeight = textAscent() + textDescent();
+    
+      //Draw box
+      float boxWidth = textWidth + 2 * 10;
+      float boxHeight = textHeight + 2 * 10;
+      
+      float boxPosx = width / 2 - textWidth /2;
+      float boxPosy = 20 - textHeight /2;
+      fill(255);
+      rect(boxPosx, boxPosy, boxWidth, boxHeight);
+    
+      // Draw the text 
+      fill(0);
+      textAlign(CENTER, CENTER);
+      text(customerDialog.get(actualText), boxPosx + boxWidth / 2, boxPosy + boxHeight / 2);
+      print(customerDialog.get(actualText));
+    }
+      
+  }
+  
+  boolean isSpeaking(){
+    return !(actualText >= customerDialog.size()); //if out of range returns true;
   }
 }
 

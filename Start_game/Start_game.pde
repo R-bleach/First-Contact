@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
 Player player;
 Stamp stamp;
 IdCard id;
@@ -20,10 +23,14 @@ boolean inMiddle = false;
 boolean girlArrest = false;
 boolean girlEntered = false;
 boolean reset = true;
+boolean speaking = false;
 
 //mainMenu
 boolean gameStarted = false;
 boolean GameLoop = false;
+
+//character dialogs
+ArrayList<ArrayList<String>> allCustomerDialogs = new ArrayList<ArrayList<String>>();
 
 void setup() {
   fullScreen();
@@ -35,6 +42,9 @@ void setup() {
   screen = new Screen();
   scanned = new Scanned();
   LoadImages();
+  
+  textSize(32);
+  LoadAllDialogs();
 }
 
 void draw() {
@@ -48,5 +58,14 @@ void draw() {
     opening();
   } else {
     MainMenu();
+  }
+}
+
+
+boolean spaceKeyPressed = false;
+void keyPressed() {  // Check if the pressed key is the space key
+  if (key == ' ' || keyCode == 32) {
+    println("Space key is pressed!");
+    spaceKeyPressed = true;
   }
 }
