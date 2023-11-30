@@ -16,7 +16,6 @@ class Scanned {
       image(ScanFish, 0, 0);
       if (OnScanHover())
         image(ScanFish2, 0, 0);
-      square(position.x, position.y,50);
     }
     if(charSel == 6){
       position = new PVector(displayWidth/1.24, displayHeight/2.5);
@@ -31,7 +30,6 @@ class Scanned {
       image(ScanCowgirl1, 0, 0);
       if (OnScanHover())
         image(ScanCowgirl2, 0, 0);
-      square(position.x, position.y,50);
     }
     if(charSel == 8){
       position = new PVector(displayWidth/1.11, displayHeight/1.725);
@@ -40,16 +38,11 @@ class Scanned {
       image(ScanCelestial, 0, 0);
       if (OnScanHover())
         image(ScanCelestial2, 0, 0);
-      square(position.x, position.y,50);
     }
     if(charSel == 9){
-      position = new PVector(displayWidth/1.148, displayHeight/1.275);
       image(Fly,displayWidth/5,displayHeight/2.5,Fly.width/1.5,Fly.height/1.5);
       image(leverScanScene, 0, 0);
       image(ScanFly, 0, 0);
-      if (OnScanHover())
-        image(ScanFly2, 0, 0);
-      square(position.x, position.y,50);
     }
     if(charSel == 10){
       position = new PVector(displayWidth/1.09, displayHeight/1.8);
@@ -58,7 +51,6 @@ class Scanned {
       image(ScanSpider, 0, 0);
       if (OnScanHover())
         image(ScanSpider2, 0, 0);
-      square(position.x, position.y,50);
     }
     if(charSel == 11){
       position = new PVector(displayWidth/1.07, displayHeight/2);
@@ -67,7 +59,6 @@ class Scanned {
       image(ScanChonker, 0, 0);
       if (OnKnifeHover())
         image(ScanChonker2, 0, 0);
-      rect(position.x, position.y,displayWidth/35,displayWidth/20);
     }
   }
 }

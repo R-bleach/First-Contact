@@ -10,6 +10,8 @@ void reset() {
 
 void mousePressed() {
   if (mouseButton == LEFT) {
+    if(!OnGreenHover() && !OnRedHover())
+    spaceKeyPressed = true;
     if (inMiddle && OnIdHover() ||inMiddle && id.checkingId && isCheckingId) {
       mouseDownId = true;
     } else if (inMiddle && OnGreenHover()) {
@@ -24,6 +26,9 @@ void mousePressed() {
     }
     else if (OnLeverHoverScreen()) {
       isCheckingScan = !isCheckingScan;
+    }
+    else if(OnRestart()){
+      fullReset();
     }
   }
 }
@@ -93,6 +98,16 @@ boolean OnLeverHoverScreen() {
   else return false;
 }
 
+boolean OnRestart() {
+  if (restart.position.y <= player.position.y &&
+    restart.position.y + 50 >= player.position.y &&
+    restart.position.x <= player.position.x &&
+    restart.position.x + 100 >= player.position.x)
+  {
+    return true;
+  } else return false;
+}
+
 
 
 void CheckingIdHover() {
@@ -122,6 +137,7 @@ void drawAll() {
   if (id.idDrawing)
     id.DrawID();
   screen.DrawInstructions();
+  restart.Draw();
   player.Draw();
 }
 
@@ -156,5 +172,6 @@ timer = 0;
 charSel = 0;
 stamp.decisionMade = false;
 minorIn = false;
+customersIn = 0;
 reset = true;
 }

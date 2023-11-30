@@ -5,12 +5,14 @@ void LoadAllDialogs(){
   
   //ALIEN dialog GOOD 1
   ArrayList<String> alienDiaGood = new ArrayList<String>();
+  alienDiaGood.add("");
   alienDiaGood.add("Well,");
   alienDiaGood.add("at least the stars seem to be");
   alienDiaGood.add("shining brighter in here than in my office");
   
   //ALIEN dialog BAD 11
   ArrayList<String> alienDiaBad = new ArrayList<String>();
+  alienDiaBad.add("");
   alienDiaBad.add("Typical.");
   alienDiaBad.add("Even in the universe's best clubs,");
   alienDiaBad.add("there's still paperwork to get through.");
@@ -20,12 +22,14 @@ void LoadAllDialogs(){
   
   //SNAKE dialog GOOD 2
   ArrayList<String> snakeDiaGood = new ArrayList<String>();
+  snakeDiaGood.add("");
   snakeDiaGood.add("Thank you kindly!");
   snakeDiaGood.add("Time to show these scales a good time.");
   snakeDiaGood.add("Let's see what this universe-renowned club has to offer");
   
   //SNAKE dialog BAD 12
   ArrayList<String> snakeDiaBad = new ArrayList<String>();
+  snakeDiaBad.add("");
   snakeDiaBad.add("Well,");
   snakeDiaBad.add("that's a shame.");
   snakeDiaBad.add("I guess my reptilian charm didn't work its magic this time.");
@@ -36,6 +40,7 @@ void LoadAllDialogs(){
   //GOBLIN dialog GOOD 3
   ArrayList<String> goblinDiaGood = new ArrayList<String>();
   //Finally, someone with brains. Let's see if this joint lives up to the hype
+  goblinDiaGood.add("");
   goblinDiaGood.add("Finally,");
   goblinDiaGood.add("someone with brains.");
   goblinDiaGood.add("Let's see if this joint lives up to the hype");
@@ -43,6 +48,7 @@ void LoadAllDialogs(){
   //GOBLIN dialog BAD 13
   ArrayList<String> goblinDiaBad = new ArrayList<String>();
   //You've got a problem, pal? I didn't come lightyears for some overgrown bouncer to tell me I can't get in. You better rethink this unless you want trouble on your hands.
+  goblinDiaBad.add("");
   goblinDiaBad.add("You've got a problem, pal?");
   goblinDiaBad.add("I didn't come lightyears for some overgrown bouncer to");
   goblinDiaBad.add("tell me I can't get in.");
@@ -52,6 +58,7 @@ void LoadAllDialogs(){
   //FISH dialog GOOD 4
   ArrayList<String> fishDiaGood = new ArrayList<String>();
   //Water you waiting for? Thanks for taking the plunge! Let's see what kind of currents swirl around in this club
+  fishDiaGood.add("");
   fishDiaGood.add("Water you waiting for?");
   fishDiaGood.add("Thanks for taking the plunge!");
   fishDiaGood.add("Let's see what kind of currents swirl around in this club");
@@ -59,6 +66,7 @@ void LoadAllDialogs(){
   //FISH dialog BAD 14
   ArrayList<String> fishDiaBad = new ArrayList<String>();
   //Guess they're not ready for a head filled with aquatic wonders. Oh well, I'll just keep swimming along to find my own rhythm elsewhere
+  fishDiaBad.add("");
   fishDiaBad.add("Guess they're not ready for");
   fishDiaBad.add("a head filled with aquatic wonders.");
   fishDiaBad.add("Oh well,");
@@ -68,18 +76,21 @@ void LoadAllDialogs(){
   //FROG dialog GOOD
   ArrayList<String> frogDiaGood = new ArrayList<String>();
   //good - Hnrm, hpmf! content froggy noises
+  frogDiaGood.add("");
   frogDiaGood.add("Hnrm, hpmf!");
   frogDiaGood.add("*content froggy noises*");
   
   //FROG dialog BAD
   //bad - Hnrm... dejected frog sounds.
   ArrayList<String> frogDiaBad = new ArrayList<String>();
+  frogDiaBad.add("");
   frogDiaBad.add("Hnrm...");
   frogDiaBad.add("*dejected frog sounds*");
   
   //COWGIRL dialog GOOD
   ArrayList<String> cowgirlDiaGood = new ArrayList<String>();
   //Well, bless your heart! You just made my day a whole lot easier. If you ever find yourself in a tight spot, remember the name. I owe you one
+  cowgirlDiaGood.add("");
   cowgirlDiaGood.add("Well,");
   cowgirlDiaGood.add("bless your heart!");
   cowgirlDiaGood.add("You just made my day a whole lot easier.");
@@ -90,6 +101,7 @@ void LoadAllDialogs(){
   //COWGIRL dialog BAD
   ArrayList<String> cowgirlDiaBad = new ArrayList<String>();
   //bad - Well, sugar, you might've just missed out on the chance for some real excitement tonight. But don't you worry, I'll find another way in, you'll regret not letting me through. The hunt never stops
+  cowgirlDiaBad.add("");
   cowgirlDiaBad.add("Well, sugar,");
   cowgirlDiaBad.add("you might've just missed out on the chance");
   cowgirlDiaBad.add("for some real excitement tonight.");
@@ -101,6 +113,7 @@ void LoadAllDialogs(){
   //SPIDER dialog
   ArrayList<String> spiderDiaGood = new ArrayList<String>();
   //good - Took you long enough. Now, watch as I weave my way into the heart of this party. Don't get caught in my web, darling
+  spiderDiaGood.add("");
   spiderDiaGood.add("Took you long enough.");
   spiderDiaGood.add("Now,");
   spiderDiaGood.add("watch as I weave my way into the");
@@ -110,6 +123,7 @@ void LoadAllDialogs(){
   //SPIDER dialog BAD
   ArrayList<String> spiderDiaBad = new ArrayList<String>();
   //bad - Unbelievable! This is an insult. You just missed out on the chance to have the most captivating creature at your so-called 'best' club. Enjoy your mundane clientele
+  spiderDiaBad.add("");
   spiderDiaBad.add("Unbelievable!");
   spiderDiaBad.add("This is an insult.");
   spiderDiaBad.add("You just missed out on the chance to have");
@@ -120,6 +134,7 @@ void LoadAllDialogs(){
   //CELESTIAL dialog
   ArrayList<String> celestialDiaGood = new ArrayList<String>();
   //good - Ah, you have wisely acknowledged the greatness before you. Let the festivities commence, for where I tread, revelry and splendor follow!
+  celestialDiaGood.add("");
   celestialDiaGood.add("Ah, you have wisely acknowledged");
   celestialDiaGood.add("the greatness before you.");
   celestialDiaGood.add("Let the festivities commence,");
@@ -129,6 +144,7 @@ void LoadAllDialogs(){
   //CELESTIAL dialog BAD
   ArrayList<String> celestialDiaBad = new ArrayList<String>();
   //bad - Clearly, your feeble establishment is not ready to accommodate a deity of my caliber. I shall find a more worthy venue that understands the true essence of divine presence. Farewell, mortals!
+  celestialDiaBad.add("");
   celestialDiaBad.add("Clearly, your feeble establishment");
   celestialDiaBad.add("is not ready to accommodate a deity of my caliber.");
   celestialDiaBad.add("I shall find a more worthy venue");

@@ -84,7 +84,6 @@ class Customer {
   }
   
   void showDialog(){
- 
     if (spaceKeyPressed){ //show next dialog
       spaceKeyPressed = false;
       actualText += 1;

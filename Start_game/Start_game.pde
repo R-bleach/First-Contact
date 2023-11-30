@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 Player player;
+Restart restart;
 Stamp stamp;
 IdCard id;
 Screen screen;
@@ -25,9 +26,12 @@ boolean girlEntered = false;
 boolean reset = true;
 boolean speaking = false;
 boolean minorIn = false;
+int customersIn;
+boolean spaceKeyPressed = false;
+boolean decisionMade = false;;
 
 //mainMenu
-boolean gameStarted = false;
+boolean gameStarted = false;  
 boolean GameLoop = false;
 
 //character dialogs
@@ -42,6 +46,7 @@ void setup() {
   id = new IdCard();
   screen = new Screen();
   scanned = new Scanned();
+  restart = new Restart();
   LoadImages();
   
   textSize(32);
@@ -59,14 +64,5 @@ void draw() {
     opening();
   } else {
     MainMenu();
-  }
-}
-
-
-boolean spaceKeyPressed = false;
-void keyPressed() {  // Check if the pressed key is the space key
-  if (key == ' ' || keyCode == 32) {
-    println("Space key is pressed!");
-    spaceKeyPressed = true;
   }
 }

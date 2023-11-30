@@ -16,7 +16,7 @@ void opening() {
   nextScene();
 }
 void nextScene() {
-  if(timer == 120){
+  if(timer == 240){
       timer = 0;
       openingScene ++;
   }
